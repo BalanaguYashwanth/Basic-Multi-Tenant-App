@@ -1,5 +1,11 @@
+export enum Entites {
+  Admin = "admin",
+  Developers = "developers",
+  Home = "home",
+}
+
 export const TemplateObject = {
-  admin: {
+  [Entites.Admin]: {
     header: {
       backgroundColor: "rgb(174, 237, 237)",
       color: "black",
@@ -13,9 +19,9 @@ export const TemplateObject = {
     direction: "row",
     imageWidth: 450,
     imageHeight: 300,
-    hasButton:true,
+    hasButton: true,
   },
-  developers: {
+  [Entites.Developers]: {
     header: {
       backgroundColor: "rgb(43, 43, 48)",
       color: "white",
@@ -29,9 +35,9 @@ export const TemplateObject = {
     direction: "column",
     imageWidth: 700,
     imageHeight: 400,
-    hasButton:true,
+    hasButton: true,
   },
-  home: {
+  [Entites.Home]: {
     header: {
       backgroundColor: "#7053ff",
       color: "white",
@@ -46,6 +52,6 @@ export const TemplateObject = {
     direction: "column",
     imageWidth: 700,
     imageHeight: 400,
-    hasButton:false,
+    hasButton: false,
   },
 };

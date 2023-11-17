@@ -1,11 +1,11 @@
 import DynamicTemplate from "../../common/components/DynamicTemplate";
-import { TemplateObject } from "../../common/constants";
+import { Entites, TemplateObject } from "../../common/constants";
 
 const Main = ({ params }) => {
   let [subdomain, domain] = params["domain"].split(".");
- 
-  if(!Object.keys(TemplateObject).includes(subdomain)){
-    subdomain = 'home'
+
+  if (!Object.keys(TemplateObject).includes(subdomain)) {
+    subdomain = Entites.Home;
   }
 
   const {
@@ -20,9 +20,7 @@ const Main = ({ params }) => {
     hasButton,
   } = TemplateObject[subdomain];
 
-
   return (
-    <>
     <DynamicTemplate
       header={header}
       contents={contents}
@@ -34,7 +32,6 @@ const Main = ({ params }) => {
       direction={direction}
       hasButton={hasButton}
     />
-    </>
   );
 };
 

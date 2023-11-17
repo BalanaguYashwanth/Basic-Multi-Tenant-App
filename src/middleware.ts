@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
+import { Entites } from "./common/constants";
 
 export const config = {
   matcher: [
@@ -38,11 +39,11 @@ export default async function middleware(req: NextRequest) {
     searchParams.length > 0 ? `?${searchParams}` : ""
   }`;
 
-  const HOME = 'localhost:3000'
+  const HOME = "localhost:3000";
 
-  if(hostname === HOME){
-    return NextResponse.rewrite(new URL(`/home`, req.url));
-  }else{
+  if (hostname === HOME) {
+    return NextResponse.rewrite(new URL(`/${Entites.Home}`, req.url));
+  } else {
     return NextResponse.rewrite(new URL(`/${hostname}`, req.url));
   }
 }

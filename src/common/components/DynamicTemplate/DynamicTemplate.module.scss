@@ -1,19 +1,23 @@
-.container{
+.container {
     display: flex;
     margin-inline: 50px;
-    section{
+
+    section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 1.2rem;
-        img{
+
+        img {
             border-radius: 8px;
         }
-        p{
+
+        p {
             line-height: 1.6rem;
         }
-        button{
+
+        button {
             align-self: flex-start;
             padding: 4px;
             margin: 1rem 0px;
