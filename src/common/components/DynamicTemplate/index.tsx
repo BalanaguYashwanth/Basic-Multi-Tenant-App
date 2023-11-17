@@ -1,29 +1,59 @@
+'use client';
+import { ToastContainer, toast } from "react-toastify";
+import Header from "../Header";
 import styles from "./DynamicTemplate.module.scss";
 import Image from "next/image";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const DynamicTemplate = ({
-  title,
+  header,
   contents,
   image,
+  imageWidth,
+  imageHeight,
   backgroundColor,
   color,
+  direction,
+  hasButton,
 }) => {
+  const { backgroundColor: headerBgColor, color: headerColor,title } = header;
+
+  const handleButton = () => {
+    toast(`Welcome to ${title} page`)
+  }
+
   return (
     <main
       style={{
         backgroundColor: backgroundColor,
         color: color,
-        height: "100vh",
         width: "100vw",
+        height: "100vh",
       }}
-      className={styles.container}
     >
-      <section>
-        <h1 className={styles.heading}>{title}</h1>
-        <p>{contents}</p>
-      </section>
-      <section>
-        <Image src={image} alt={`${title} image`} width={300} height={300} />
+      <ToastContainer />
+      <Header
+        title={title}
+        backgroundColor={headerBgColor}
+        color={headerColor}
+      />
+      <section
+        className={styles.container}
+        style={{ flexDirection: direction }}
+      >
+        <section>
+          <Image
+            src={image}
+            alt="dogwalk"
+            width={imageWidth}
+            height={imageHeight}
+          />
+        </section>
+        <section>
+          <p>{contents}</p>
+         { hasButton && <button onClick={handleButton}>See welcome</button>}
+        </section>
       </section>
     </main>
   );

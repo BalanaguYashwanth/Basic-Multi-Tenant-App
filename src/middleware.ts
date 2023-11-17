@@ -41,7 +41,7 @@ export default async function middleware(req: NextRequest) {
   const HOME = 'localhost:3000'
 
   if(hostname === HOME){
-    return NextResponse.rewrite(new URL(`/`, req.url));
+    return NextResponse.rewrite(new URL(`/home`, req.url));
   }else{
     return NextResponse.rewrite(new URL(`/${hostname}`, req.url));
   }
