@@ -5,6 +5,7 @@ import styles from "./DynamicTemplate.module.scss";
 import Image from "next/image";
 import "react-toastify/dist/ReactToastify.css";
 import { DynamicTemplateProps } from "../../types";
+import Button from "../Button";
 
 const DynamicTemplate = ({
   header,
@@ -19,7 +20,11 @@ const DynamicTemplate = ({
   hasButton,
 }: DynamicTemplateProps) => {
   const { backgroundColor: headerBgColor, color: headerColor, title } = header;
-  const {title:buttonTitle,radius,color:buttonColor} = button || {title:"",radius:0,color:""}
+  const {
+    title: buttonTitle,
+    radius,
+    color: buttonColor,
+  } = button || { title: "", radius: 0, color: "" };
 
   const handleButton = () => {
     toast(`Welcome to ${title} page`);
@@ -54,7 +59,14 @@ const DynamicTemplate = ({
         </section>
         <section>
           <p>{contents}</p>
-          {hasButton && <button style={{backgroundColor:buttonColor,borderRadius:radius}} onClick={handleButton}>{buttonTitle}</button>}
+          {hasButton && (
+            <Button
+              color={buttonColor}
+              radius={radius}
+              handleClick={handleButton}
+              title={buttonTitle}
+            />
+          )}
         </section>
       </section>
     </main>
