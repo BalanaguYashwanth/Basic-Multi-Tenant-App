@@ -17,6 +17,7 @@ const Main = ({ params }) => {
     direction,
     imageWidth,
     imageHeight,
+    button,
     hasButton,
   } = TemplateObject[subdomain];
 
@@ -30,6 +31,7 @@ const Main = ({ params }) => {
       imageWidth={imageWidth}
       imageHeight={imageHeight}
       direction={direction}
+      button={button}
       hasButton={hasButton}
     />
   );

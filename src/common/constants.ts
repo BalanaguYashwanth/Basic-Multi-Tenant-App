@@ -19,6 +19,11 @@ export const TemplateObject = {
     direction: "row",
     imageWidth: 450,
     imageHeight: 300,
+    button:{
+      title:'See welcome',
+      color:'green',
+      radius:4,
+    },
     hasButton: true,
   },
   [Entites.Developers]: {
@@ -35,6 +40,11 @@ export const TemplateObject = {
     direction: "column",
     imageWidth: 700,
     imageHeight: 400,
+    button:{
+      title:'See welcome',
+      color:'green',
+      radius:4,
+    },
     hasButton: true,
   },
   [Entites.Home]: {

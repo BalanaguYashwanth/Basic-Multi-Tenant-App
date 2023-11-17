@@ -15,9 +15,11 @@ const DynamicTemplate = ({
   backgroundColor,
   color,
   direction,
+  button,
   hasButton,
 }: DynamicTemplateProps) => {
   const { backgroundColor: headerBgColor, color: headerColor, title } = header;
+  const {title:buttonTitle,radius,color:buttonColor} = button || {title:"",radius:0,color:""}
 
   const handleButton = () => {
     toast(`Welcome to ${title} page`);
@@ -52,7 +54,7 @@ const DynamicTemplate = ({
         </section>
         <section>
           <p>{contents}</p>
-          {hasButton && <button onClick={handleButton}>See welcome</button>}
+          {hasButton && <button style={{backgroundColor:buttonColor,borderRadius:radius}} onClick={handleButton}>{buttonTitle}</button>}
         </section>
       </section>
     </main>

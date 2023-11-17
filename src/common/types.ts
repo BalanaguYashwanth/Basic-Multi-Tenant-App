@@ -1,3 +1,15 @@
+export interface HeaderProps {
+  title: string;
+  backgroundColor: string;
+  color: string;
+}
+
+export interface ButtonProps{
+  title:string,
+  color:string,
+  radius:number,
+}
+
 export interface DynamicTemplateProps {
   header: HeaderProps;
   contents: string;
@@ -7,11 +19,6 @@ export interface DynamicTemplateProps {
   backgroundColor: string;
   color: string;
   direction: "row" | "column" | "row-reverse" | "column-reverse";
+  button:ButtonProps,
   hasButton: boolean;
-}
-
-export interface HeaderProps {
-  title: string;
-  backgroundColor: string;
-  color: string;
 }
