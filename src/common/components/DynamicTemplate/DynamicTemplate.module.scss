@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .heading{
+        margin-top:20px;
+        margin-bottom: 30px;
+        color: var(--clr-white-200);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Inter;
+        font-size: 86.109px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 88px; /* 102.196% */
+        letter-spacing: -1.76px;
+    }
+
+    p{
+        color: var(--clr-grey-200);
+        font-family: Inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; 
+    }
+}
