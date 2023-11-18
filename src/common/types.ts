@@ -8,6 +8,7 @@ export interface ButtonProps{
   title:string,
   color:string,
   radius:number,
+  handleClick:()=>void
 }
 
 export interface DynamicTemplateProps {
