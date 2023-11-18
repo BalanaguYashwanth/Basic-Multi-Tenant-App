@@ -1,3 +1,7 @@
+export interface MainProps {
+  params: { domain: string };
+}
+
 export interface HeaderProps {
   title: string;
   backgroundColor: string;

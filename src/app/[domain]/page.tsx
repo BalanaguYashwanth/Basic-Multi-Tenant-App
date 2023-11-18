@@ -2,8 +2,9 @@ import '../globals.scss'
 import DynamicTemplate from "../../common/components/DynamicTemplate";
 import { TemplateObject } from "../../common/model";
 import { Entites } from '../../common/constants';
+import { MainProps } from '../../common/types';
 
-const Main = ({ params }) => {
+const Main = ({ params }:MainProps) => {
   let [subdomain, domain] = params["domain"].split(".");
 
   if (!Object.keys(TemplateObject).includes(subdomain)) {
