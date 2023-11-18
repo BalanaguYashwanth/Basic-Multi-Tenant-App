@@ -41,6 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
         ├── page.tsx
     ├── Common
         ├── constants
+        ├── model
         ├── types
         ├── components
             ├── Button
@@ -49,6 +50,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
             └── ...
     ├── middleware
     ├── env.template
+
+### Component Structure 
+
+        ├── Button
+            ├── tests
+                ├── Button.test.js
+        ├── index.js
+        ├── Button.module.scss
+
 
 ## Design Structure
 

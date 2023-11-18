@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import DynamicTemplate from "../index";
-import { Entites, TemplateObject } from "../../../constants";
+import { Entites, TemplateObject } from "../../../model";
 
 it("Basic Dynamic Template tests", () => {
   const handleClick = jest.fn();

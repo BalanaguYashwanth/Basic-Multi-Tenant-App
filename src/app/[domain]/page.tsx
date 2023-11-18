@@ -1,6 +1,7 @@
 import '../globals.scss'
 import DynamicTemplate from "../../common/components/DynamicTemplate";
-import { Entites, TemplateObject } from "../../common/constants";
+import { TemplateObject } from "../../common/model";
+import { Entites } from '../../common/constants';
 
 const Main = ({ params }) => {
   let [subdomain, domain] = params["domain"].split(".");
