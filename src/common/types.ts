@@ -4,12 +4,12 @@ export interface HeaderProps {
   color: string;
 }
 
-export interface ButtonProps{
-  title:string,
-  color:string,
-  radius:number,
-  backgroundColor:string,
-  handleClick:()=>void
+export interface ButtonProps {
+  title: string;
+  color: string;
+  radius: number;
+  backgroundColor: string;
+  handleClick: () => void;
 }
 
 export interface DynamicTemplateProps {
@@ -21,6 +21,6 @@ export interface DynamicTemplateProps {
   backgroundColor: string;
   color: string;
   direction: "row" | "column" | "row-reverse" | "column-reverse";
-  button:ButtonProps,
+  button: ButtonProps;
   hasButton: boolean;
 }

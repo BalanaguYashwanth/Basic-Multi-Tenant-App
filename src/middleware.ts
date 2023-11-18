@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
 import { Entites } from "./common/constants";
 
 export const config = {
@@ -39,7 +38,7 @@ export default async function middleware(req: NextRequest) {
     searchParams.length > 0 ? `?${searchParams}` : ""
   }`;
 
-  const HOME = "localhost:3000";
+  const HOME = process.env.NEXT_PUBLIC_HOME || "localhost:3000" ;
 
   if (hostname === HOME) {
     return NextResponse.rewrite(new URL(`/${Entites.Home}`, req.url));

@@ -8,6 +8,7 @@ Multi-tenant app build using [Next.js](https://nextjs.org/)
 | NPM          | Latest (v10.2.3) |
 | Typescript   | Latest (v4.8.3)  |
 | Eslint       | Latest (v8.50.0) |
+| Jest         | Latest           |
 
 ## Getting Started
 
@@ -51,14 +52,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     ├── middleware
     ├── env.template
 
-### Component Structure 
+### Component Structure
 
         ├── Button
             ├── tests
                 ├── Button.test.js
         ├── index.js
         ├── Button.module.scss
-
 
 ## Design Structure
 

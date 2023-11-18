@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ToastContainer, toast } from "react-toastify";
 import Header from "../Header";
 import styles from "./DynamicTemplate.module.scss";
@@ -21,7 +21,7 @@ const DynamicTemplate = ({
 }: DynamicTemplateProps) => {
   const { backgroundColor: headerBgColor, color: headerColor, title } = header;
   const {
-    backgroundColor:buttonBgColor,
+    backgroundColor: buttonBgColor,
     title: buttonTitle,
     radius,
     color: buttonColor,
