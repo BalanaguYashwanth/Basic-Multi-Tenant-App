@@ -21,6 +21,7 @@ const DynamicTemplate = ({
 }: DynamicTemplateProps) => {
   const { backgroundColor: headerBgColor, color: headerColor, title } = header;
   const {
+    backgroundColor:buttonBgColor,
     title: buttonTitle,
     radius,
     color: buttonColor,
@@ -35,8 +36,6 @@ const DynamicTemplate = ({
       style={{
         backgroundColor: backgroundColor,
         color: color,
-        width: "100vw",
-        height: "100vh",
       }}
     >
       <ToastContainer />
@@ -61,6 +60,7 @@ const DynamicTemplate = ({
           <p>{contents}</p>
           {hasButton && (
             <Button
+              backgroundColor={buttonBgColor}
               color={buttonColor}
               radius={radius}
               handleClick={handleButton}

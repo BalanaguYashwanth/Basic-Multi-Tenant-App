@@ -8,6 +8,7 @@ export interface ButtonProps{
   title:string,
   color:string,
   radius:number,
+  backgroundColor:string,
   handleClick:()=>void
 }
 

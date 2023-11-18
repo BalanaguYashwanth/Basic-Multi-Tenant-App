@@ -1,9 +1,10 @@
 import { ButtonProps } from "../../types";
 
-const Button = ({ color, title, radius,handleClick }:ButtonProps) => {
+const Button = ({ color, backgroundColor,title, radius,handleClick }:ButtonProps) => {
   return (
     <button
-      style={{ backgroundColor: color, borderRadius: radius }}
+      data-testid="custom-button"
+      style={{ backgroundColor:backgroundColor,color: color, borderRadius: radius }}
       onClick={handleClick}
     >
       {title}

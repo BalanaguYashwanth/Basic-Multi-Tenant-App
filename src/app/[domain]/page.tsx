@@ -1,3 +1,4 @@
+import '../globals.scss'
 import DynamicTemplate from "../../common/components/DynamicTemplate";
 import { Entites, TemplateObject } from "../../common/constants";
 
