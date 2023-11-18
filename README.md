@@ -1,37 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Multi-tenant app build using [Next.js](https://nextjs.org/)
+
+## Prerequisite
+
+| Prerequisite | Version |
+| ------------ | ------- |
+| Node         | Latest  |
+| NPM          | Latest  |
+| Typescript   | Latest  |
 
 ## Getting Started
 
-First, run the development server:
+First, Install:
+
+```bash
+  npm install
+```
+
+Copy the contents from ``env.template`` file to ``env.local``
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## File Structure
 
-## Learn More
+    .
+    ├── app
+    ├── [Domain]                  
+        ├── page.tsx
+    ├── Common
+        ├── constants
+        ├── types
+        ├── components
+            ├── Button
+            ├── Dynamic Template
+            ├── Header
+            └── ...
+    ├── middleware
+    ├── env.template
 
-To learn more about Next.js, take a look at the following resources:
+## Design Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Follows subdomain based routing logic using Next.js routing features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Routing logic implemented in middleware 
 
-## Deploy on Vercel
+- Based on the routing logic, it gets redirect to page file where single component will be the landing page for all subdomains.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Color Schema, Content, Image and more can easily customizable using json based single component
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Basic-Multi-Tenant-App
+- Implemented the unit test cases that make sure code will get well maintainable
+
+- Follows proper naming convention, modularization and clean code practices
+
+## Learn more
+
+- We can also implement single tenancy architecture in multi tenancy app where each tenant in multi tenancy has seperate build and serperate server 
+
+- Othercase multi tenancy architecture directly can implement in multi tenancy app where each tenant will be sharing the same build and same server with other tenant and these tenants divided based on the routing logic
+
+- Each architecture has their pros and cons based on requirements, proper decision should be taken care for code and app saclability 
+
+![alt single tenancy vs multi tenancy](https://firebasestorage.googleapis.com/v0/b/alarm-a709f.appspot.com/o/singlevsmulti.png?alt=media&token=eb473244-f99b-47fd-8f08-6b85604c476c)
+
+![alt design](https://firebasestorage.googleapis.com/v0/b/alarm-a709f.appspot.com/o/design-multi-tenancy.png?alt=media&token=57ac0770-cb17-4f84-b9f9-227ce403aadb)
